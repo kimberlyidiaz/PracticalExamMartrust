@@ -33,8 +33,8 @@ namespace PracticalExamMartrust
             {
                 options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
                 {
-                    Title = "Swagger Demo Api",
-                    Description = "Demo API for showing swagger",
+                    Title = "Martrust API",
+                    Description = "Martrust API",
                     Version = "v1"
                 });
                 var fileName = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
@@ -65,7 +65,7 @@ namespace PracticalExamMartrust
             app.UseSwagger(); //swagger middleware
             app.UseSwaggerUI(options =>
             {
-                options.SwaggerEndpoint("/swagger/v1/swagger.json", "Swagger Demo API");
+                options.SwaggerEndpoint("/swagger/v1/swagger.json", "Martrust API");
                 options.RoutePrefix = "";
             }); //swagger UI
         }
